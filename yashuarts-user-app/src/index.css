@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#0B0B0B] text-slate-100 antialiased selection:bg-[#D4AF37] selection:text-slate-950 overflow-x-hidden;
+    font-family: 'Inter', sans-serif;
+    max-width: 100vw;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.05em;
+  }
+
+  header {
+    padding-top: env(safe-area-inset-top, 0px) !important;
+    min-height: calc(4rem + env(safe-area-inset-top, 0px)) !important;
+    height: auto !important;
+  }
+}

@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — YashuArts</title>
+  <meta name="description" content="Privacy Policy for the YashuArts mobile application. Learn how we collect, use, and protect your personal data." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold: #D4AF37;
+      --gold-light: #F3E5AB;
+      --bg: #0B0B0B;
+      --surface: #161616;
+      --border: rgba(255,255,255,0.07);
+      --text: #E2E2E2;
+      --muted: #888;
+      --accent: #D4AF37;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      font-size: 15px;
+    }
+
+    /* ── Header ─────────────────────────────────── */
+    header {
+      background: linear-gradient(180deg, #111 0%, #0B0B0B 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 40px 24px 36px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: -80px; left: 50%;
+      transform: translateX(-50%);
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(212,175,55,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .logo-wrap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      width: 56px; height: 56px;
+      border-radius: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 8px 32px rgba(212,175,55,0.25);
+    }
+    .logo-wrap svg { width: 28px; height: 28px; color: #1a1a1a; }
+    header h1 {
+      font-size: clamp(24px, 5vw, 32px);
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    header p.sub {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 6px;
+      letter-spacing: 0.5px;
+    }
+    .badge {
+      display: inline-block;
+      margin-top: 12px;
+      background: rgba(212,175,55,0.1);
+      border: 1px solid rgba(212,175,55,0.2);
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 100px;
+    }
+
+    /* ── Layout ─────────────────────────────────── */
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* ── TOC ─────────────────────────────────────── */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-bottom: 48px;
+    }
+    .toc h2 {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+    .toc ol {
+      list-style: none;
+      counter-reset: toc-counter;
+      display: grid;
+      gap: 8px;
+    }
+    .toc ol li {
+      counter-increment: toc-counter;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      font-size: 13.5px;
+    }
+    .toc ol li::before {
+      content: counter(toc-counter, decimal-leading-zero);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--gold);
+      min-width: 22px;
+    }
+    .toc ol li a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .toc ol li a:hover { color: var(--text); }
+
+    /* ── Sections ────────────────────────────────── */
+    section {
+      margin-bottom: 44px;
+      scroll-margin-top: 24px;
+    }
+    section h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    section h2 .num {
+      background: rgba(212,175,55,0.12);
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      padding: 3px 9px;
+      border-radius: 6px;
+      min-width: 30px;
+      text-align: center;
+    }
+    section p { color: #b0b0b0; margin-bottom: 12px; }
+    section p:last-child { margin-bottom: 0; }
+
+    /* ── Info Cards ──────────────────────────────── */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 22px;
+      margin: 14px 0;
+    }
+    .card-title {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    /* ── Data Table ──────────────────────────────── */
+    .data-grid {
+      display: grid;
+      gap: 10px;
+      margin: 14px 0;
+    }
+    .data-row {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 12px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      align-items: start;
+    }
+    .data-row .label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 0.3px;
+    }
+    .data-row .value {
+      font-size: 13px;
+      color: #a0a0a0;
+    }
+
+    /* ── Service Pills ───────────────────────────── */
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 14px 0;
+    }
+    .service-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 13px;
+      color: var(--text);
+    }
+    .service-pill .dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+
+    /* ── Rights List ─────────────────────────────── */
+    .rights-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      margin: 14px 0;
+    }
+    .rights-list li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      font-size: 13.5px;
+      color: #a0a0a0;
+    }
+    .rights-list li .icon {
+      font-size: 16px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ── Contact Box ─────────────────────────────── */
+    .contact-box {
+      background: linear-gradient(135deg, rgba(212,175,55,0.06), rgba(212,175,55,0.02));
+      border: 1px solid rgba(212,175,55,0.2);
+      border-radius: 16px;
+      padding: 28px;
+      text-align: center;
+    }
+    .contact-box h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .contact-box p { color: var(--muted); font-size: 13.5px; }
+    .contact-box a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .contact-box a:hover { text-decoration: underline; }
+
+    /* ── Divider ─────────────────────────────────── */
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+
+    /* ── Footer ─────────────────────────────────── */
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 0.3px;
+    }
+    footer strong { color: var(--gold); }
+
+    /* ── Responsive ─────────────────────────────── */
+    @media (max-width: 520px) {
+      .data-row { grid-template-columns: 1fr; gap: 4px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-wrap">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+    </svg>
+  </div>
+  <h1>YashuArts</h1>
+  <p class="sub">Privacy Policy</p>
+  <span class="badge">Last Updated: May 29, 2026</span>
+</header>
+
+<main>
+
+  <!-- TOC -->
+  <nav class="toc" aria-label="Table of Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#s1">Information We Collect</a></li>
+      <li><a href="#s2">How We Use Your Information</a></li>
+      <li><a href="#s3">Third-Party Services</a></li>
+      <li><a href="#s4">Data Storage &amp; Security</a></li>
+      <li><a href="#s5">Your Rights</a></li>
+      <li><a href="#s6">Children's Privacy</a></li>
+      <li><a href="#s7">Changes to This Policy</a></li>
+      <li><a href="#s8">Contact Us</a></li>
+    </ol>
+  </nav>
+
+  <!-- Intro -->
+  <section>
+    <p>
+      Welcome to <strong style="color:#fff">YashuArts</strong>. We are committed to protecting your personal
+      information and your right to privacy. This Privacy Policy explains what information we collect when you
+      use our mobile application, why we collect it, and how we use it.
+    </p>
+    <p>
+      By using the YashuArts app, you agree to the collection and use of information in accordance with this policy.
+    </p>
+  </section>
+
+  <hr />
+
+  <!-- 1. Information We Collect -->
+  <section id="s1">
+    <h2><span class="num">01</span> Information We Collect</h2>
+    <p>We collect only the information necessary to provide our services. This includes:</p>
+
+    <div class="data-grid">
+      <div class="data-row">
+        <div class="label">Account Information</div>
+        <div class="value">Full name, email address, and password (stored as a secure hash — never in plain text).</div>
+      </div>
+      <div class="data-row">
+        <div class="label">Order Details</div>
+        <div class="value">Delivery address, city, state, pincode, contact phone number, artwork preferences, and payment status.</div>
+      </div>
+      <div class="data-row">
+        <div class="label">Profile Images</div>
+        <div class="value">Photos you choose to upload as your profile picture or as artwork reference images.</div>
+      </div>
+      <div class="data-row">
+        <div class="label">Messages</div>
+        <div class="value">Chat messages sent between you and the YashuArts team through the in-app messaging feature.</div>
+      </div>
+      <div class="data-row">
+        <div class="label">Device &amp; App Data</div>
+        <div class="value">Device type, operating system version, and app usage analytics to improve performance. No personally identifying device data is shared with third parties.</div>
+      </div>
+      <div class="data-row">
+        <div class="label">Push Notification Token</div>
+        <div class="value">A Firebase Cloud Messaging (FCM) device token to send you order status updates and notifications. You can disable this in your device settings.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. How We Use -->
+  <section id="s2">
+    <h2><span class="num">02</span> How We Use Your Information</h2>
+    <div class="card">
+      <div class="card-title">Purposes of Data Processing</div>
+      <ul class="rights-list" style="margin:0">
+        <li><span class="icon">🎨</span> To process and fulfil your custom artwork orders and commissions.</li>
+        <li><span class="icon">📦</span> To communicate order status, delivery updates, and confirmations.</li>
+        <li><span class="icon">🔔</span> To send push notifications about your orders (can be disabled in device settings).</li>
+        <li><span class="icon">💬</span> To enable real-time messaging between customers and the artist team.</li>
+        <li><span class="icon">📊</span> To analyse app usage patterns and improve the user experience.</li>
+        <li><span class="icon">🔐</span> To authenticate your account and keep it secure.</li>
+      </ul>
+    </div>
+    <p>We do <strong style="color:#fff">not</strong> sell, rent, or trade your personal information to any third parties for marketing purposes.</p>
+  </section>
+
+  <!-- 3. Third-Party Services -->
+  <section id="s3">
+    <h2><span class="num">03</span> Third-Party Services</h2>
+    <p>YashuArts uses the following trusted third-party services to operate. Each service has its own privacy policy.</p>
+
+    <div class="services">
+      <div class="service-pill">
+        <span class="dot"></span>
+        <div>
+          <div style="font-weight:600;font-size:13px">MongoDB Atlas</div>
+          <div style="font-size:11px;color:var(--muted)">Secure cloud database — stores user accounts, orders &amp; messages</div>
+        </div>
+      </div>
+      <div class="service-pill">
+        <span class="dot"></span>
+        <div>
+          <div style="font-weight:600;font-size:13px">Cloudinary</div>
+          <div style="font-size:11px;color:var(--muted)">Image storage &amp; delivery — stores artwork and profile photos</div>
+        </div>
+      </div>
+      <div class="service-pill">
+        <span class="dot"></span>
+        <div>
+          <div style="font-weight:600;font-size:13px">Firebase Cloud Messaging</div>
+          <div style="font-size:11px;color:var(--muted)">Push notifications — order status alerts</div>
+        </div>
+      </div>
+      <div class="service-pill">
+        <span class="dot"></span>
+        <div>
+          <div style="font-weight:600;font-size:13px">Socket.IO</div>
+          <div style="font-size:11px;color:var(--muted)">Real-time messaging — live chat and admin notifications</div>
+        </div>
+      </div>
+    </div>
+
+    <p style="font-size:13px; margin-top:16px">
+      These providers are contractually required to protect your data and may not use it for any purpose
+      other than providing the services to YashuArts.
+    </p>
+  </section>
+
+  <!-- 4. Data Storage & Security -->
+  <section id="s4">
+    <h2><span class="num">04</span> Data Storage &amp; Security</h2>
+    <p>
+      All data is stored on <strong style="color:#fff">MongoDB Atlas</strong> servers with encryption at rest and in transit (TLS/SSL).
+      Account passwords are hashed using <strong style="color:#fff">bcrypt</strong> and are never stored in plain text.
+    </p>
+    <p>
+      Authentication is handled via <strong style="color:#fff">JSON Web Tokens (JWT)</strong> with a 30-day expiry.
+      Tokens are stored locally on your device and are never transmitted to any third party.
+    </p>
+    <div class="card">
+      <div class="card-title">Data Retention</div>
+      <p style="margin:0; color:#a0a0a0; font-size:13.5px">
+        Your data is retained for as long as your account is active. If you request account deletion, all personal
+        data including your profile, orders, messages, and uploaded images will be permanently deleted within
+        <strong style="color:#fff">30 days</strong> of your request.
+      </p>
+    </div>
+  </section>
+
+  <!-- 5. Your Rights -->
+  <section id="s5">
+    <h2><span class="num">05</span> Your Rights</h2>
+    <p>You have the following rights regarding your personal data:</p>
+    <ul class="rights-list">
+      <li><span class="icon">👁</span> <strong style="color:#ddd">Access</strong> — Request a copy of the personal data we hold about you.</li>
+      <li><span class="icon">✏️</span> <strong style="color:#ddd">Correction</strong> — Update or correct any inaccurate information via the Profile screen.</li>
+      <li><span class="icon">🗑️</span> <strong style="color:#ddd">Deletion</strong> — Request permanent deletion of your account and all associated data.</li>
+      <li><span class="icon">🚫</span> <strong style="color:#ddd">Opt-Out of Notifications</strong> — Disable push notifications at any time in your device settings.</li>
+      <li><span class="icon">📤</span> <strong style="color:#ddd">Data Portability</strong> — Request your data in a portable format by contacting us.</li>
+    </ul>
+    <p style="font-size:13.5px">To exercise any of these rights, contact us at the email address below.</p>
+  </section>
+
+  <!-- 6. Children's Privacy -->
+  <section id="s6">
+    <h2><span class="num">06</span> Children's Privacy</h2>
+    <p>
+      YashuArts is not directed at children under the age of <strong style="color:#fff">13</strong>. We do not knowingly
+      collect personal information from children under 13. If you are a parent or guardian and believe your child
+      has provided us with personal information, please contact us immediately and we will delete such information.
+    </p>
+  </section>
+
+  <!-- 7. Changes -->
+  <section id="s7">
+    <h2><span class="num">07</span> Changes to This Policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time. We will notify you of any significant changes by
+      updating the "Last Updated" date at the top of this page and, where appropriate, through an in-app notification.
+    </p>
+    <p>
+      Continued use of the app after any changes constitutes your acceptance of the updated policy.
+    </p>
+  </section>
+
+  <!-- 8. Contact -->
+  <section id="s8">
+    <h2><span class="num">08</span> Contact Us</h2>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please contact us:</p>
+    <div class="contact-box">
+      <h3>YashuArts — Privacy Team</h3>
+      <p style="margin-top:8px">
+        📧 <a href="mailto:yasaswinilalli@gmail.com">yasaswinilalli@gmail.com</a>
+      </p>
+      <p style="margin-top:6px">We aim to respond within <strong style="color:#fff">48 hours</strong>.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 <strong>YashuArts</strong>. All rights reserved.</p>
+  <p style="margin-top:4px">Hyderabad, Telangana, India &nbsp;·&nbsp; com.yashuarts.app</p>
+</footer>
+
+</body>
+</html>
